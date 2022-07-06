@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+:root {
+    --primary-color: #FDCF00;
+    --secondary-color: #ffa800;
+    --dark-color: #111;
+    --container-size: 1024px;
+    --card-title-background: #232323;
+    --light-background: #242424 --orange: #FFA800;
+    --green: #96CB00;
+    --yellow: #ECDA00;
+    --purple: #7548C2;
+    --pink: #D095AB;
+    --blue: #00BFFF;
+    --card-size: calc(var(--container-size) / 4 - 32px);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-color);
+    color: white;
+    padding-top: 50px;
+}
+
+.container {
+    max-width: var(--container-size);
+    margin: 0 auto;
+    /* Centraliza na tela o container */
+    padding: 0 24px;
+}
+
+.menu__container {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    align-items: center;
+    /* Alinha verticalmente ao centro o logo e os links */
+}
+
+.menu__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 24px;
+}
+
+.menu {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu__item {
+    display: inline-block;
+    margin: 0 12px;
+    padding: 16px 24px;
+}
+
+.menu__link {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu__item--active {
+    background: var(--primary-color);
+    border-radius: 100px;
+}
+
+.menu__item--active .menu__link {
+    color: var(--dark-color);
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.footer {
+    position: relative;
+    margin-top: 200px;
+    background-color: var(--light-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.footer__image {
+    width: 350px;
+    position: absolute;
+    top: -100px;
+}
+
+.footer__links {
+    display: inline-block;
+    color: white;
+    margin: 0 24px;
+    text-decoration: none;
+}
+
+.footer__link {
+    color: white;
+    margin: 0 24px;
+    text-decoration: none;
+}
+
+.footer__link:hover {
+    color: var(--primary-color);
+}
+
+.footer__button {
+    margin: 36px 0;
+}
+
+.button__link {
+    padding: 16px 24px;
+    background-color: var(--primary-color);
+    border-radius: 100px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--dark-color);
+    transition: .3s ease-in-out;
+}
+
+.button__link:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+    .preview__container {
+        flex-direction: column;
+    }
+    .preview__pokemon {
+        position: relative;
+        margin-bottom: 36px;
+        width: 75%;
+        top: 100px;
+    }
+    .preview__details {
+        width: auto;
+        background: linear-gradient(0deg, #242424 0%, rgba(36, 36, 36, 0) 95.6%);
+    }
+    .preview__pills {
+        flex-wrap: wrap;
+    }
+    .preview__pill {
+        margin-bottom: 8px;
+    }
+    .skills__description {
+        text-align: center;
+    }
+    .evolutions__list {
+        flex-direction: column;
+    }
+    .evolutions__item {
+        margin: 0 80px;
+    }
+}
