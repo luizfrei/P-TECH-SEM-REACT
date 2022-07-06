@@ -18,4 +18,6 @@ function getContentCard(data) {
       <div class="card__title"> ${data.name}</div>
     </a>
     `;
+
+
 }
